@@ -1,0 +1,24 @@
+myhaha
+user{
+id int(11)
+username varchar(20)
+sex varchar(2)
+image varchar(255)
+email varchar(40)
+phone varchar(15)
+userpwd varchar(6)
+regtime varchar(40);
+}
+message{
+id int(11)
+user_id int(11)
+content varchar(255)
+createtime varchar(40)
+}
+reply{
+id int(11)
+user_id int(11)
+recontent varchar(255)
+retime varchar(40)
+reply_id int(11)
+}
