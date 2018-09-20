@@ -1,2 +1,7 @@
-# GuestBook
-ajax，json，jquery
+# MyGuestBook
+
+1.简单的留言板程序,具有注册,登录,发表,回复等功能，无刷新页面
+
+2.下载，放到PHP环境下(xampp等)
+
+3.运行即可
