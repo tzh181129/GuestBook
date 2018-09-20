@@ -1,0 +1,72 @@
+<html>
+<head>
+    <title>用户个人中心</title>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/user.js"></script>
+    <link rel="stylesheet" href="css/information.css" type="text/css">
+    <script type="text/javascript">
+        $(function() {
+            $.ajax({
+                type: "GET",
+                url: "../controller/usershow.php",
+
+                success: function (data) {
+                    var image = "";
+                    var username = "";
+                    var sex="";
+                    var email="";
+                    var phone="";
+                    for (var i = 0; i < data.length; i++) {
+                        var ls = data[i];
+                       image += "<span>"+"<img src=" + ls.image + " width=100px height=100px>"+"</br>"+"</span>";
+                       username+= "<span>用户名：" + ls.username + "</br>"+"</span>";
+                        sex += "<span>用户性别：" + ls.sex + "</span>";
+                        email += "<span>用户邮箱地址：" + ls.email + "</br>"+"</span>";
+                        phone+= "<span>用户电话号码：" + ls.phone + "</br>"+"</span>";
+                    }
+                    $("#image").html(image);
+                    $("#username").html(username);
+                    $("#sex").html(sex);
+                    $("#email").html(email);
+                    $("#phone").html(phone);
+                },
+
+            });
+        })
+    </script>
+
+</head>
+<body>
+
+<table border="0">
+    <caption>个人信息管理</caption>
+    <tr>
+        <td></td>
+        <td><div id="image"></div></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><div id="username"></div></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><div id="sex"></div></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><div id="email"></div></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><div id="phone"></div></td>
+        <td></td>
+    </tr>
+</table>
+
+</body>
+</html>

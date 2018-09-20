@@ -1,0 +1,86 @@
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <title>哈哈网注册</title>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" href="css/registerstyle.css" type="text/css">
+    <script type="text/javascript" src="js/registerstyle.js"></script>
+    <script type="text/javascript" src="js/user.js"></script>
+
+</head>
+<body>
+<div>
+    <img id="img" src="image/4.jpg" width="520" height="550">
+    <a href="" target="_self"><img src="image/p.gif" width="150" height="150" class="a"></a>
+</div>
+
+<table border="0" align="center">
+    <form id="form" name="form">
+        <tr>
+            <td colspan="2" align="center"><h2>欢迎注册哈哈</h2></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center"><h3>每一天，乐在沟通</h3></td>
+
+        </tr>
+        <tr>
+            <td></td>
+            <td align="right"><img src="image/user.jpg" width="70" height="50"/></td>
+            <td align="left"><input name="username" id="username" type="text" placeholder="请输入用户名"/></td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td style="float: right;">
+                <img src="image/a.jpg" id="picture" height="50px" width="50px" border="1px solid red">
+            </td>
+            <td>
+                <select name="image" id="image" onchange="document.images['picture'].src=options[selectedIndex].value;"
+                        style="width:100px;">
+                    <option value="image/a.jpg" selected>头像一</option>
+                    <option value="image/e.jpg">头像二</option>
+                    <option value="image/f.jpg">头像三</option>
+                    <option value="image/h.jpg">头像四</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td align="right"><img src="image/sex.jpg" width="70" height="50"/></td>
+            <td align="left" id="wrap"><input type="radio" name="sex"  value="1" checked >男
+                <input type="radio" name="sex"  value="0">女
+            </td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td align="right"><img src="image/email.jpg" width="50" height="50"/></td>
+            <td><input name="email" type="text" id="email" placeholder="请输入邮箱"/></td>
+
+        </tr>
+        <tr>
+            <td></td>
+            <td align="right"><img src="image/phone.jpg" width="50" height="50"/></td>
+            <td><input name="phone" type="text" id="phone" placeholder="请输入电话号码"/></td>
+
+        </tr>
+
+        <tr>
+            <td></td>
+            <td align="right"><img src="image/pwd.jpg" width="50" height="50"/></td>
+            <td><input name="userpwd" type="password" id="userpwd" placeholder="请输入密码"/></td>
+        </tr>
+        <input type="hidden" name="action"  value="register">
+        <tr>
+            <td colspan="3">
+                <button id="submit" class="button" onclick="registerPost()">注册</button>
+                <a href="login.html" class="login">登录</a>
+            </td>
+        </tr>
+    </form>
+</table>
+
+</body>
+</html>
+

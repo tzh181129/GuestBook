@@ -1,0 +1,40 @@
+* { margin:0px; padding: 0px;}
+
+.top{
+    height:200px;
+    background:url('../image/12.jpg') repeat;
+    background-size:800px 200px;
+}
+.topmenu{
+    width:790px;
+    height:60px;
+    background-color:#666666;
+    position:absolute;
+    top:140px;
+    right:0px;
+    text-align: center;
+
+}
+.topmenu ul {
+    list-style-type: none;
+}
+.topmenu ul li a {
+    color:black;
+    text-decoration: none;
+
+}
+.topmenu ul li {
+    padding: 10px;
+    display: inline-block;
+    margin-left:100px;
+}
+.b{
+    width:38%;
+    height:390px;
+    float:left;
+}
+.a{
+    width:61%;
+    height:390px;
+    float:right;
+}

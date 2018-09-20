@@ -1,0 +1,46 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="js/guestbook.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $.ajax({
+                type: "GET",
+                url: "../controller/usershow.php",
+
+                success: function (data) {
+                    var html = "";
+                    for (var i = 0; i < data.length; i++) {
+                        var ls = data[i];
+                        html += "<span>用户名：" + ls.username + "</span>";
+                    }
+                    $("#test").html(html);
+                },
+
+            });
+        })
+    </script>
+</head>
+<body>
+<div float='left'>欢迎<div id="test"></div>登录留言板，此页面为回复留言页面</div>
+<table width=600 height=200 align=center>
+    <form name="form" id="form">
+        <input type="hidden" name="action" value="reply">
+        <caption><h3>回复内容</h3></caption>
+        <tr>
+            <td>回复内容：</td>
+            <td><textarea cols=40 rows=10 name="recontent"></textarea></td>
+        </tr>
+    </form>
+    <tr>
+        <td align=right>
+            <button id="submit" onclick="replyPost()">回复</button>
+        </td>
+        <td align=center>
+            <button id="reset">重置</button>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

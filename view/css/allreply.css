@@ -1,0 +1,18 @@
+
+.a{
+    font-size:16px;
+    color:#DCDCDC;
+    width:160px;
+}
+.b{
+    font-size:16px;
+    color:	#000000;
+    width:600px;
+}
+table{
+    margin-top: 50px;
+}
+body{
+    background:url("../image/6.jpg") ;
+    background-size:1300px 590px;
+}
